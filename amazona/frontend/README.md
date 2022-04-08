@@ -13,3 +13,4 @@
    1. define reducer
    2. update fetchData function
    3. get state from useReducer
+5.
