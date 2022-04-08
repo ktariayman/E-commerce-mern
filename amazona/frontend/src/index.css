@@ -35,3 +35,6 @@ flex:1}
 .product-info {
   padding: 1rem;
 }
+.img-large {
+  max-width: 100%;
+}
