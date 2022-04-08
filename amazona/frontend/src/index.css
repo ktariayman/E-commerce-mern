@@ -16,6 +16,13 @@ flex:1}
   flex-wrap: wrap;
   justify-content: center;
 }
+.btn-primary{
+  background-color:#f0c040 !important;
+  color:#000 !important;
+}
+.rating span {
+  color: #ffc000;
+}
 
 .product {
   border: 1px #404040 solid;
