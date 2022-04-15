@@ -13,4 +13,7 @@
    1. define reducer
    2. update fetchData function
    3. get state from useReducer
-5.
+8. LOADING AND MESSAGE COMPONENTS   
+ 1. create spinner component
+ 2. create message component
+ 3. create utils..js to define Error Function ( getError)
