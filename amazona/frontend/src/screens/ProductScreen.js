@@ -7,12 +7,13 @@ import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import Rating from '../components/Rating';
 import { Helmet } from 'react-helmet-async';
-import {  useEffect ,useReducer } from 'react';
+import {  useContext, useEffect ,useReducer } from 'react';
 // import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Loading from '../components/Loading';
 import Message from '../components/Message';
 import { getError } from '../utils';
+import { Store } from '../Store';
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
@@ -46,6 +47,16 @@ function ProductScreen() {
     };
     fetchData();
   }, [slug]);
+
+  
+
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const addToCartHandler = () => {
+    ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: { ...product, quantity: 1 },
+    });
+  };
   return loading ? (
       <Loading/>
     ) : error ? (
@@ -107,7 +118,7 @@ function ProductScreen() {
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <div className="d-grid">
-                      <Button variant="primary">Add to Cart</Button>
+                      <Button   onClick={addToCartHandler} variant="primary">Add to Cart</Button>
                     </div>
                   </ListGroup.Item>
                 )}
