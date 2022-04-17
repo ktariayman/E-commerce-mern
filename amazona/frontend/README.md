@@ -63,3 +63,9 @@
 12. ADD TO CART FUNCTION 
     1. check exist item in the cart
     2. check count in stock in backend
+
+13. Create Cart Screen
+    1. click handler for inc/dec item
+    2. click handler for remove item
+    3. click handler for checkout
+    4. show Message if there is 0 product in the cart 
