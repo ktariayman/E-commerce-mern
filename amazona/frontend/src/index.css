@@ -41,3 +41,7 @@ flex:1}
 .img-thumbnail {
   height:80px !important;
 }
+
+.small-container {
+  max-width: 600px;
+}
